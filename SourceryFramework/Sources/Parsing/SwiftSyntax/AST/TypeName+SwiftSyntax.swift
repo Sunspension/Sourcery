@@ -192,8 +192,6 @@ extension TypeName {
         if let typeIdentifier = type.as(AttributedTypeSyntax.self), let specifier = typeIdentifier.specifier {
             if specifier.tokenKind == .inoutKeyword {
                 isInOut = true
-            } else {
-                assertionFailure("Unhandled specifier")
             }
         }
         
